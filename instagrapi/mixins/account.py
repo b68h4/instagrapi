@@ -261,7 +261,7 @@ class AccountMixin:
             "entry_point": "ig_web_settings",
         })
 
-    def convertBusiness(self) -> dict:
+    def convertPersonal(self) -> dict:
         return self.private_request("business/account/convert_account/", {
             "to_account_type": 1,
             "entry_point": "ig_web_settings",
