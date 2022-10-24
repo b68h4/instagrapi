@@ -34,7 +34,7 @@ setup(
     author='Mikhail Andreev',
     author_email='x11org@gmail.com',
     license='MIT',
-    url='https://github.com/adw0rd/instagrapi',
+    url='https://github.com/b68h4/instagrapi',
     install_requires=requirements,
     keywords=[
         'instagram private api', 'instagram-private-api', 'instagram api', 'instagram-api', 'instagram',

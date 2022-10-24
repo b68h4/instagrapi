@@ -245,6 +245,28 @@ class AccountMixin:
             ),
         )
 
+    def convertBusiness(self, cid: int) -> dict:
+        return self.private_request("business/account/convert_account/", {
+            "category_id": cid,
+            "create_business_id": "true",
+            "should_bypass_contact_check": "true",
+            "should_show_category": 1,
+            "set_public": "true",
+            "to_account_type": 3,
+            "fb_user_id": None,
+            "fb_user_nonce": None,
+            "preferred_business_id": None,
+            "page_id": None,
+            "preferred_business_id": None,
+            "entry_point": "ig_web_settings",
+        })
+
+    def convertBusiness(self) -> dict:
+        return self.private_request("business/account/convert_account/", {
+            "to_account_type": 1,
+            "entry_point": "ig_web_settings",
+        })
+
     def send_confirm_phone_number(self, phone_number: str) -> dict:
         """
         Send confirmation code to new phone number
